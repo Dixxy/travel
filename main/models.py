@@ -3,7 +3,7 @@ from django.db import models
 
 class Tours(models.Model):
     # id = models.IntegerField(primary_key=True)
-	tour = models.CharField('Название тура', max_length=30)
+	city_name = models.CharField('Название тура или города', max_length=30)
 	description = models.TextField('О туре')
 	img1 = models.ImageField('Изображение', upload_to='/images/')
 	# img2 = models.ImageField(upload_to='', verbose_name)
@@ -16,7 +16,7 @@ class Tours(models.Model):
         verbose_name_plural = 'Туры'
     
     def __str__(self):
-            return self.tour
+            return self.city_name
 
 
     # def get_absolute_url(self):
